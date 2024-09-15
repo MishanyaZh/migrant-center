@@ -12,8 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "light-theme": "linear-gradient(135deg, #f0f0f0, #e0e0e0)",
+        "dark-theme": "linear-gradient(135deg, #0f0f0f, #333333)",
+      },
     },
   },
   plugins: [],
+  darkMode: "class",
 };
 export default config;

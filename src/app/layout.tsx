@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import NavLinks from "./ui/NavLinks/NavLinks";
+import { mainLinks } from "./ui/NavLinks/linksData";
+import DarkModeSwitch from "./ui/DarkModeSwitch/DarkModeSwitch";
+import Providers from "./Providers";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="pl" suppressHydrationWarning className="h-full">
+      <body className={`${inter.className} font-sans`}>
+        <Providers>
+          <header>
+            Header section
+            <DarkModeSwitch />
+          </header>
+          <NavLinks links={mainLinks} />
+          <main className="flex-grow">{children}</main>
+          <footer>Footer section</footer>
+        </Providers>
       </body>
     </html>
   );
