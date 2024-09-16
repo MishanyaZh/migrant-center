@@ -3,8 +3,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import NavLinks from "./ui/NavLinks/NavLinks";
 import { mainLinks } from "./ui/NavLinks/linksData";
-import DarkModeSwitch from "./ui/DarkModeSwitch/DarkModeSwitch";
 import Providers from "./Providers";
+import Header from "./ui/Header/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,10 +25,7 @@ export default function RootLayout({
     <html lang="pl" suppressHydrationWarning className="h-full">
       <body className={`${inter.className} font-sans`}>
         <Providers>
-          <header>
-            Header section
-            <DarkModeSwitch />
-          </header>
+          <Header />
           <NavLinks links={mainLinks} />
           <main className="flex-grow">{children}</main>
           <footer>Footer section</footer>

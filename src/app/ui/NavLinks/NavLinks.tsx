@@ -7,7 +7,7 @@ import { linksTypes } from "./linksData";
 export default function NavLinks({ links }: { links: linksTypes[] }) {
   const pathname = usePathname();
   return (
-    <nav className="min-w-full h-[52px] flex items-center justify-center gap-2 bg-gray-100">
+    <nav className="hidden md:flex min-w-full h-[52px] items-center justify-center gap-2 bg-gray-100">
       {links.map((link) => {
         const isActiveLink = pathname === link.href;
         return (

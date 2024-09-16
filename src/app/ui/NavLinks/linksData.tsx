@@ -11,14 +11,14 @@ export const mainLinks = [
     href: "/",
   },
   {
-    id: "contacts",
-    name: "Contacts",
-    href: "/contacts",
-  },
-  {
     id: "gallery",
     name: "Gallery",
     href: "/gallery",
+  },
+  {
+    id: "contacts",
+    name: "Contacts",
+    href: "/contacts",
   },
 ];
 
