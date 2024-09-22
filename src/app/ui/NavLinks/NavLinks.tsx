@@ -7,14 +7,14 @@ import { linksTypes } from "./linksData";
 export default function NavLinks({ links }: { links: linksTypes[] }) {
   const pathname = usePathname();
   return (
-    <nav className="hidden md:flex min-w-full h-[52px] items-center justify-center gap-2 bg-gray-100">
+    <nav className="hidden md:flex min-w-full h-[52px] items-center justify-center gap-2 bg-theme-background-2">
       {links.map((link) => {
         const isActiveLink = pathname === link.href;
         return (
           <Link
             key={link.name}
             href={link.href}
-            className={`flex h-[42px] items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm text-green-500 font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:p-2 md:px-3 ${isActiveLink ? "bg-sky-100 text-blue-600" : ""}`}
+            className={`flex h-[52px] items-center justify-center gap-2  bg-theme-background p-3 text-sm text-textColor-regular font-medium hover:text-textColor-primary hover:bg-theme-background-2 md:flex-none md:p-2 md:px-3 ${isActiveLink ? "text-textColor-primary bg-theme-background-2" : ""}`}
           >
             <p className="">{link.name}</p>
           </Link>

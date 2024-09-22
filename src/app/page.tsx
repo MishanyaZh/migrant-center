@@ -1,3 +1,9 @@
+import Services from "./ui/Services/Services";
 export default function Home() {
-  return <div>Home Page Hello</div>;
+  return (
+    <div>
+      <h2>Home page content</h2>
+      <Services />
+    </div>
+  );
 }

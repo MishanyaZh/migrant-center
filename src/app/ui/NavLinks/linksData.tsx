@@ -24,13 +24,13 @@ export const mainLinks = [
 
 export const contactsLinks = [
   {
-    id: "gorzow",
-    name: "Gorzow",
-    href: "/contacts/gorzow",
+    id: "contact1",
+    name: "Contact1",
+    href: "/contacts/contact1",
   },
   {
-    id: "sopot",
-    name: "Sopot",
-    href: "/contacts/sopot",
+    id: "contact2",
+    name: "Contact2",
+    href: "/contacts/contact2",
   },
 ];

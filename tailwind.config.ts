@@ -9,16 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "theme-backdrop": "var(--theme-backdrop)",
+        "theme-background": "var(--theme-background)",
+        "theme-background-2": "var(--theme-background-2)",
+        "textColor-regular": "var(--text-regular)",
+        "textColor-primary": "var(--text-primary)",
+        "textColor-secondary": "var(--text-secondary)",
+
+        "special-yellow": "var(--special-yellow)",
+        "special-violet": "var(--special-violet)",
+        "special-white": "var(--special-white)",
+        "special-green": "var(--special-green)",
       },
       backgroundImage: {
-        "light-theme": "linear-gradient(135deg, #f0f0f0, #e0e0e0)",
-        "dark-theme": "linear-gradient(135deg, #0f0f0f, #333333)",
+        "theme-backdrop": "var(--theme-backdrop)",
+        "theme-background": "var(--theme-background)",
+        "theme-background-2": "var(--theme-background-2)",
       },
     },
   },
   plugins: [],
   darkMode: "class",
 };
+
 export default config;

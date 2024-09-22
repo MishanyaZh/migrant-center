@@ -5,6 +5,7 @@ import NavLinks from "./ui/NavLinks/NavLinks";
 import { mainLinks } from "./ui/NavLinks/linksData";
 import Providers from "./Providers";
 import Header from "./ui/Header/Header";
+import Footer from "./ui/Footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
           <Header />
           <NavLinks links={mainLinks} />
           <main className="flex-grow">{children}</main>
-          <footer>Footer section</footer>
+          <Footer />
         </Providers>
       </body>
     </html>

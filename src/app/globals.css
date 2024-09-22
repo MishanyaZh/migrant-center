@@ -3,20 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-  --foreground: #333333;
+  --theme-backdrop: rgba(255, 255, 255, 1);
+  --theme-background: linear-gradient(
+    135deg,
+    rgba(240, 240, 240, 1),
+    rgba(224, 224, 224, 1)
+  );
+  --theme-background-2: linear-gradient(
+    135deg,
+    rgba(15, 15, 15, 0.1),
+    rgba(51, 51, 51, 0.1)
+  );
+
+  --textColor-regular: rgba(51, 51, 51, 1);
+  --textColor-primary: rgba(247, 9, 25, 1);
+  --textColor-secondary: rgba(85, 85, 85, 1);
+
+  --special-yellow: rgba(255, 215, 0, 1);
+  --special-violet: rgba(138, 43, 226, 1);
+  --special-white: rgba(255, 255, 255, 1);
+  --special-green: rgba(34, 139, 34, 1);
 }
 
 .dark {
-  --background: linear-gradient(135deg, #0f0f0f, #333333);
-  --foreground: #f0f0f0;
+  --theme-backdrop: rgba(24, 25, 33, 1);
+  --theme-background: linear-gradient(
+    135deg,
+    rgba(25, 33, 24, 1),
+    rgba(24, 25, 33, 0.6)
+  );
+  --theme-background-2: linear-gradient(
+    135deg,
+    rgba(240, 240, 240, 0.5),
+    rgba(224, 224, 224, 0.5)
+  );
+
+  --textColor-regular: rgba(240, 240, 240, 1);
+  --textColor-primary: rgba(247, 9, 25, 0.7);
+  --textColor-secondary: rgba(187, 187, 187, 1);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--textColor-regular);
+  background: var(--theme-background);
   font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 @layer utilities {
