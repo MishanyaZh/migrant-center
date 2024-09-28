@@ -12,9 +12,9 @@ const config: Config = {
         "theme-backdrop": "var(--theme-backdrop)",
         "theme-background": "var(--theme-background)",
         "theme-background-2": "var(--theme-background-2)",
-        "textColor-regular": "var(--text-regular)",
-        "textColor-primary": "var(--text-primary)",
-        "textColor-secondary": "var(--text-secondary)",
+        "textColor-regular": "var(--textColor-regular)",
+        "textColor-primary": "var(--textColor-primary)",
+        "textColor-secondary": "var(--textColor-secondary)",
 
         "special-yellow": "var(--special-yellow)",
         "special-violet": "var(--special-violet)",

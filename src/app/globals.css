@@ -6,8 +6,8 @@
   --theme-backdrop: rgba(255, 255, 255, 1);
   --theme-background: linear-gradient(
     135deg,
-    rgba(240, 240, 240, 1),
-    rgba(224, 224, 224, 1)
+    rgba(255, 215, 0, 0.3),
+    rgba(255, 255, 255, 1)
   );
   --theme-background-2: linear-gradient(
     135deg,
@@ -29,8 +29,8 @@
   --theme-backdrop: rgba(24, 25, 33, 1);
   --theme-background: linear-gradient(
     135deg,
-    rgba(25, 33, 24, 1),
-    rgba(24, 25, 33, 0.6)
+    rgba(24, 25, 33, 0.6),
+    rgba(34, 139, 34, 0.6)
   );
   --theme-background-2: linear-gradient(
     135deg,

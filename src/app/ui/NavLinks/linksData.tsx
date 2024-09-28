@@ -33,4 +33,14 @@ export const contactsLinks = [
     name: "Contact2",
     href: "/contacts/contact2",
   },
+  {
+    id: "contact3",
+    name: "Contact3",
+    href: "/contacts/contact3",
+  },
+  {
+    id: "contact4",
+    name: "Contact4",
+    href: "/contacts/contact4",
+  },
 ];

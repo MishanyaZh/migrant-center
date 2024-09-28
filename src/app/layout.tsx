@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" suppressHydrationWarning className="h-full">
-      <body className={`${inter.className} font-sans`}>
+    <html lang="pl" suppressHydrationWarning className="">
+      <body className={`${inter.className} font-sans h-full`}>
         <Providers>
           <Header />
           <NavLinks links={mainLinks} />

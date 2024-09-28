@@ -14,7 +14,14 @@ export default function NavLinks({ links }: { links: linksTypes[] }) {
           <Link
             key={link.name}
             href={link.href}
-            className={`flex h-[52px] items-center justify-center gap-2  bg-theme-background p-3 text-sm text-textColor-regular font-medium hover:text-textColor-primary hover:bg-theme-background-2 md:flex-none md:p-2 md:px-3 ${isActiveLink ? "text-textColor-primary bg-theme-background-2" : ""}`}
+            className={`md:flex-none 
+              flex h-[52px] items-center justify-center gap-2 p-3 text-sm font-medium
+              hover:text-special-violet hover:bg-theme-background-2
+              ${
+                isActiveLink
+                  ? "text-special-violet bg-theme-background-2"
+                  : "text-textColor-regular bg-theme-background"
+              }`}
           >
             <p className="">{link.name}</p>
           </Link>
