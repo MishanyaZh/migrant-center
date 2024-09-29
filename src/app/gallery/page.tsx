@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <div>
-      <p>Gallery Page</p>
+      <p>Gallery Page this will be photos</p>
     </div>
   );
 }

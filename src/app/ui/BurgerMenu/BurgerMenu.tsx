@@ -5,19 +5,27 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { FiMenu, FiX, FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { mainLinks, contactsLinks } from "../NavLinks/linksData";
+import { mainRoutes, contactsRoutes } from "@/app/utils/routes";
 
 const BurgerMenu = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(true);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => {
+    !isOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+    setIsOpen(!isOpen);
+  };
+  const closeMenu = () => {
+    document.body.style.overflow = "";
+    setIsOpen(false);
+  };
   const toggleSubMenu = () => setIsSubMenuOpen(!isSubMenuOpen);
 
   return (
-    <div>
+    <div className="flex">
       <button
         onClick={toggleMenu}
         className="text-3xl focus:outline-none md:hidden z-50"
@@ -32,7 +40,7 @@ const BurgerMenu = () => {
         transform transition-transform duration-300 
         p-8 space-y-8 bg-theme-backdrop`}
       >
-        {mainLinks.map((link) => {
+        {mainRoutes.map((link) => {
           const isActiveLink = pathname === link.href;
 
           const renderMainLink = () => (
@@ -62,7 +70,7 @@ const BurgerMenu = () => {
 
                   {isSubMenuOpen && (
                     <div className="w-full bg-theme-background shadow-lg">
-                      {contactsLinks.map((subLink) => {
+                      {contactsRoutes.map((subLink) => {
                         const isActiveSubLink = pathname === subLink.href;
 
                         return (

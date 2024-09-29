@@ -28,7 +28,20 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        ".text-shadow-custom": {
+          textShadow: "2px 2px 4px var(--textColor-secondary)",
+        },
+        ".dark .text-shadow-custom": {
+          textShadow: "2px 2px 4px var(--textColor-secondary)",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
   darkMode: "class",
 };
 

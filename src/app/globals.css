@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-shadow {
+  @apply shadow-lg shadow-gray-500/40 dark:shadow-gray-500/40;
+}
+
 :root {
   --theme-backdrop: rgba(255, 255, 255, 1);
   --theme-background: linear-gradient(
     135deg,
-    rgba(255, 215, 0, 0.3),
-    rgba(255, 255, 255, 1)
+    rgba(255, 255, 255, 1),
+    rgba(255, 215, 0, 1)
   );
   --theme-background-2: linear-gradient(
     135deg,
@@ -29,8 +33,8 @@
   --theme-backdrop: rgba(24, 25, 33, 1);
   --theme-background: linear-gradient(
     135deg,
-    rgba(24, 25, 33, 0.6),
-    rgba(34, 139, 34, 0.6)
+    rgba(24, 25, 33, 1),
+    rgba(34, 139, 34, 1)
   );
   --theme-background-2: linear-gradient(
     135deg,

@@ -3,6 +3,7 @@
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Loading from "@/app/loading";
 
 const DarkModeSwitch = () => {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -25,7 +26,7 @@ const DarkModeSwitch = () => {
           </div>
         )
       ) : (
-        <div>.L.</div>
+        <Loading height={24} width={24} center />
       )}
     </>
   );
