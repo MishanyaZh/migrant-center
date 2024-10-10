@@ -39,7 +39,7 @@ const Services = () => {
         {services.map((service) => (
           <div
             key={service.id}
-            className="flex items-start bg-theme-background-2 shadow-md py-1 px-2 md:p-3 rounded-md"
+            className="flex items-center bg-theme-background-2 shadow-md py-1 px-2 md:p-3 rounded-md"
           >
             <p>{service.label}</p>
           </div>

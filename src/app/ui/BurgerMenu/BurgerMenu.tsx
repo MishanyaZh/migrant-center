@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { FiMenu, FiX, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { mainRoutes, contactsRoutes } from "@/app/utils/routes";
+import DarkModeSwitch from "../DarkModeSwitch/DarkModeSwitch";
 
 const BurgerMenu = () => {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ const BurgerMenu = () => {
   const toggleSubMenu = () => setIsSubMenuOpen(!isSubMenuOpen);
 
   return (
-    <div className="flex">
+    <div className="flex md:hidden">
       <button
         onClick={toggleMenu}
         className="text-3xl focus:outline-none md:hidden z-50"
@@ -38,8 +39,11 @@ const BurgerMenu = () => {
         className={`md:hidden flex flex-col items-start justify-start 
         ${isOpen ? "translate-x-0" : "translate-x-full"} fixed top-[68px] right-0 w-full h-full
         transform transition-transform duration-300 
-        p-8 space-y-8 bg-theme-backdrop`}
+        p-8 space-y-4 bg-theme-backdrop`}
       >
+        <div className="flex justify-end w-full">
+          <DarkModeSwitch />
+        </div>
         {mainRoutes.map((link) => {
           const isActiveLink = pathname === link.href;
 
@@ -48,7 +52,7 @@ const BurgerMenu = () => {
               href={link.href}
               onClick={closeMenu}
               className={`block text-2xl text-text-regular    
-            ${isActiveLink ? "text-special-violet" : "text-textColor-regular"} hover:text-special-violet`}
+            ${isActiveLink ? "text-textColor-primary" : "text-textColor-regular"} hover:text-textColor-primary`}
             >
               {link.name}
             </Link>
@@ -62,7 +66,7 @@ const BurgerMenu = () => {
                     {renderMainLink()}
                     <button
                       onClick={toggleSubMenu}
-                      className="ml-2 pt-1 text-text-regular hover:text-special-violet focus:outline-none"
+                      className="ml-2 pt-1 text-text-regular hover:text-textColor-primary focus:outline-none"
                     >
                       {isSubMenuOpen ? <FiChevronUp /> : <FiChevronDown />}
                     </button>
@@ -78,7 +82,7 @@ const BurgerMenu = () => {
                             key={subLink.id}
                             href={subLink.href}
                             className={`block px-2 py-2 text-text-regular
-                          ${isActiveSubLink ? "text-special-violet" : "text-textColor-regular"} hover:text-special-violet`}
+                          ${isActiveSubLink ? "text-textColor-primary" : "text-textColor-regular"} hover:text-textColor-primary`}
                             onClick={closeMenu}
                           >
                             {subLink.name}
