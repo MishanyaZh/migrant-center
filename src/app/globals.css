@@ -6,6 +6,14 @@
   @apply shadow-lg shadow-gray-500/40 dark:shadow-gray-500/40;
 }
 
+.hidden-on-mobile {
+  @apply hidden md:block;
+}
+
+.hidden-on-desktop  {
+  @apply md:hidden;
+}
+
 :root {
   --special-yellow: #fed337;
   --special-violet: #ad88bd;

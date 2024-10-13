@@ -26,20 +26,20 @@ const BurgerMenu = () => {
   const toggleSubMenu = () => setIsSubMenuOpen(!isSubMenuOpen);
 
   return (
-    <div className="flex md:hidden">
+    <div className="hidden-on-desktop flex">
       <button
         onClick={toggleMenu}
-        className="text-3xl focus:outline-none md:hidden z-50"
+        className="text-3xl focus:outline-none z-50"
         aria-label="Toggle Menu"
       >
         {isOpen ? <FiX /> : <FiMenu />}
       </button>
 
       <nav
-        className={`md:hidden flex flex-col items-start justify-start 
-        ${isOpen ? "translate-x-0" : "translate-x-full"} fixed top-[68px] right-0 w-full h-full
+        className={`flex flex-col items-start justify-start p-8
+        ${isOpen ? "translate-x-0" : "translate-x-full"} fixed top-[64px] right-0 w-full h-full
         transform transition-transform duration-300 
-        p-8 space-y-4 bg-theme-backdrop`}
+        bg-theme-backdrop custom-shadow`}
       >
         <div className="flex justify-end w-full">
           <DarkModeSwitch />
@@ -51,7 +51,7 @@ const BurgerMenu = () => {
             <Link
               href={link.href}
               onClick={closeMenu}
-              className={`block text-2xl text-text-regular    
+              className={`block text-2xl text-text-regular mb-3  
             ${isActiveLink ? "text-textColor-primary" : "text-textColor-regular"} hover:text-textColor-primary`}
             >
               {link.name}
@@ -66,7 +66,7 @@ const BurgerMenu = () => {
                     {renderMainLink()}
                     <button
                       onClick={toggleSubMenu}
-                      className="ml-2 pt-1 text-text-regular hover:text-textColor-primary focus:outline-none"
+                      className="ml-2 mb-3 pt-1 text-text-regular hover:text-textColor-primary focus:outline-none"
                     >
                       {isSubMenuOpen ? <FiChevronUp /> : <FiChevronDown />}
                     </button>

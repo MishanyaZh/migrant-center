@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="">Contacts Page general info</div>
       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
       <NavLinks links={contactsRoutes} />
-      <div className="md:hidden w-full bg-theme-background">
+      <div className="hidden-on-desktop w-full bg-theme-background">
         Контакти:
         {contactsRoutes.map((subLink) => {
           return (
