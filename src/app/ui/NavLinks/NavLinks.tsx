@@ -10,7 +10,7 @@ export default function NavLinks({ links }: { links: linksTypes[] }) {
   const pathname = usePathname();
   return (
     <Suspense fallback={<Loading />}>
-      <nav className="hidden md:flex min-w-full h-[52px] items-center justify-center gap-2 bg-theme-background-2">
+      <nav className="hidden-on-mobile md:flex min-w-full h-[52px] items-center justify-center gap-2 bg-theme-background-2">
         {links.map((link) => {
           const isActiveLink = pathname === link.href;
           return (

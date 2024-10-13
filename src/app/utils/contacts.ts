@@ -23,6 +23,7 @@ export type ContactsLinksTypes = {
   mapIframeUrl: string;
   mapMark: string;
   facebook: string;
+  mail?: string;
 };
 
 export const contactsLinks = [
@@ -33,6 +34,7 @@ export const contactsLinks = [
     mapIframeUrl: gorzowMapSrc,
     mapMark: "https://maps.app.goo.gl/C4tEJytN6YmXoZao9",
     facebook: "https://www.facebook.com/migrantgorzow",
+    mail: "centrum.migrantagw@gmail.com",
   },
   {
     ...contactsRoutes[1],

@@ -1,12 +1,20 @@
+import ContactItems from "../ui/ContactItems/ContactItems";
+import Map from "../ui/Map/Map";
+import { contactsLinks } from "../utils/contacts";
+
 export default function Page() {
   return (
-    <div>
-      <h2>Contacts Page content</h2>
+    <section className="flex flex-col p-2 gap-3">
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
-        repellat soluta a illo? Ratione enim qui neque fugit pariatur veritatis
-        temporibus, asperiores ad. Dicta sapiente sint modi.
+        Друзі, раді поділитися з вами новиною — ми відкриваємо шостий офіс
+        Центру Мігранта. І наш новий офіс буде в місті Nowa Sól 🥳🥳🥳 Зараз
+        триває підготовка, і з жовтня ми стартуємо. Дякуємо нашій дорогій
+        Nataliia Skorobohatova за партнерство. Ми дуже раді нашій співпраці ❤️
+        Якщо ви хочете відкрити Центр Мігранта у своєму місті та отримати нашу
+        підтримку, звяжіться з нами🙂
       </p>
-    </div>
+      <ContactItems contact={contactsLinks[0]} />
+      <Map contact={contactsLinks[0]} />
+    </section>
   );
 }

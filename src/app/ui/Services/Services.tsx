@@ -1,4 +1,6 @@
 import React from "react";
+import { FaPuzzlePiece } from "react-icons/fa";
+
 const services = [
   { id: 1, label: "Подача на карту побиту по роботі" },
   { id: 2, label: "Подача на карту побиту для возз’єднання з сім’єю" },
@@ -32,16 +34,19 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Наші Послуги:</h2>
+    <div className="">
+      <h2 className="text-xl font-bold my-4">
+        Друзі, нижче список послуг, які є в нашому Центрі Мігранта:
+      </h2>
 
       <div className="grid grid-cols-1 gap-2 md:gap-4 md:grid-cols-2">
         {services.map((service) => (
           <div
             key={service.id}
-            className="flex items-center bg-theme-background-2 shadow-md py-1 px-2 md:p-3 rounded-md"
+            className="flex items-center bg-theme-background-2 shadow-md py-1 px-2 md:p-3 rounded-md gap-2"
           >
-            <p>{service.label}</p>
+            <FaPuzzlePiece />
+            <p className="w-5/6">{service.label}</p>
           </div>
         ))}
       </div>

@@ -1,23 +1,25 @@
 import { contactsRoutes } from "../utils/routes";
 import NavLinks from "../ui/NavLinks/NavLinks";
 import Link from "next/link";
+import { FaPuzzlePiece } from "react-icons/fa";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="">
-      <div className="">Contacts Page general info</div>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <div className="px-2 md:px-0">
+      <h2 className="px-2 my-1 md:px-3 md:mb-2 text-center">
+        Офіс Центру Мігранта в твоєму місті:
+      </h2>
       <NavLinks links={contactsRoutes} />
-      <div className="hidden-on-desktop w-full bg-theme-background">
-        Контакти:
+      <div className="hidden-on-desktop w-full bg-theme-background px-4 ">
         {contactsRoutes.map((subLink) => {
           return (
             <Link
               key={subLink.id}
               href={subLink.href}
-              className="block px-0 py-0 text-text-regular hover:text-special-violet"
+              className="flex flex-row items-center align-baseline gap-2 px-0 py-0 hover:text-special-violet"
             >
-              {subLink.name}
+              <FaPuzzlePiece />
+              <span>{subLink.name}</span>
             </Link>
           );
         })}

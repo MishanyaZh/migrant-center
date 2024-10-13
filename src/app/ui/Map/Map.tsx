@@ -18,9 +18,9 @@ const Map = ({ contact }: { contact: ContactsLinksTypes }) => {
   }, []);
   return (
     <>
-      <div className="mt-4">
+      <div className="w-full mt-4 lg:w-1/2">
         <h3 className="text-xl mb-2 text-shadow-custom">
-          Znajdź nas na mapie:
+          Знайдіть нас на карті:
         </h3>
         {!isLoaded && (
           <div className="flex justify-center items-center">

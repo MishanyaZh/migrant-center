@@ -7,7 +7,7 @@
 }
 
 .hidden-on-mobile {
-  @apply hidden md:block;
+  @apply hidden;
 }
 
 .hidden-on-desktop  {

@@ -19,7 +19,7 @@ const Header = () => {
 
       <BurgerMenu />
 
-      <div className="hidden-on-mobile">
+      <div className="hidden-on-mobile md:block">
         <DarkModeSwitch />
       </div>
     </header>

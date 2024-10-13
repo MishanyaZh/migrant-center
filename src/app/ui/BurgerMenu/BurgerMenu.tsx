@@ -51,7 +51,7 @@ const BurgerMenu = () => {
             <Link
               href={link.href}
               onClick={closeMenu}
-              className={`block text-2xl text-text-regular mb-3  
+              className={`block text-2xl mb-3  
             ${isActiveLink ? "text-textColor-primary" : "text-textColor-regular"} hover:text-textColor-primary`}
             >
               {link.name}
@@ -66,7 +66,7 @@ const BurgerMenu = () => {
                     {renderMainLink()}
                     <button
                       onClick={toggleSubMenu}
-                      className="ml-2 mb-3 pt-1 text-text-regular hover:text-textColor-primary focus:outline-none"
+                      className="ml-2 mb-3 pt-1 hover:text-textColor-primary focus:outline-none"
                     >
                       {isSubMenuOpen ? <FiChevronUp /> : <FiChevronDown />}
                     </button>
@@ -81,7 +81,7 @@ const BurgerMenu = () => {
                           <Link
                             key={subLink.id}
                             href={subLink.href}
-                            className={`block px-2 py-2 text-text-regular
+                            className={`block px-2 py-2
                           ${isActiveSubLink ? "text-textColor-primary" : "text-textColor-regular"} hover:text-textColor-primary`}
                             onClick={closeMenu}
                           >

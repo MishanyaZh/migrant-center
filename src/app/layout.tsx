@@ -28,7 +28,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <NavLinks links={mainRoutes} />
-          <main className="mt-[68px] md:mt-2 flex-grow">{children}</main>
+          <main className="mt-[64px] md:mt-0 flex-grow">{children}</main>
           <Footer />
         </Providers>
       </body>

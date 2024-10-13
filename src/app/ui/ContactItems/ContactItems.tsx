@@ -1,11 +1,16 @@
 import React from "react";
 import IconBox from "../IconBox/IconBox";
 import Link from "next/link";
-import { FaFacebook, FaMapMarkedAlt, FaPhoneSquareAlt } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaMapMarkedAlt,
+  FaPhoneSquareAlt,
+  FaMailBulk,
+} from "react-icons/fa";
 import { ContactsLinksTypes } from "@/app/utils/contacts";
 
 const ContactItems = ({ contact }: { contact: ContactsLinksTypes }) => {
-  const { phone, address, mapMark, facebook } = contact;
+  const { phone, address, mapMark, facebook, mail } = contact;
   return (
     <>
       <Link
@@ -39,6 +44,18 @@ const ContactItems = ({ contact }: { contact: ContactsLinksTypes }) => {
         </IconBox>
         <span>{address}</span>
       </Link>
+
+      {mail && (
+        <Link
+          href={`mailto:${mail}`}
+          className="flex flex-row items-center align-baseline gap-4 text-shadow-custom"
+        >
+          <IconBox>
+            <FaMailBulk className="text-2xl" />
+          </IconBox>
+          <span>{mail}</span>
+        </Link>
+      )}
     </>
   );
 };
