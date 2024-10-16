@@ -10,8 +10,15 @@
   @apply hidden;
 }
 
-.hidden-on-desktop  {
+.hidden-on-desktop {
   @apply md:hidden;
+}
+
+.gallery-box {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  columns: 3 300px;
+  column-gap: 1rem;
 }
 
 :root {
@@ -24,8 +31,8 @@
   --textColor-primary: #ad88bd;
   --textColor-secondary: #77767f;
 
-  --theme-backdrop: #ffffff;;
-  --theme-background: #ffffff;;
+  --theme-backdrop: #ffffff;
+  --theme-background: #ffffff;
   --theme-background-2: #ad88bd3f;
 }
 
