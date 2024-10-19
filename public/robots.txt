@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://migrant-center.vercel.app/
+
+# Sitemaps
+Sitemap: https://migrant-center.vercel.app/sitemap.xml

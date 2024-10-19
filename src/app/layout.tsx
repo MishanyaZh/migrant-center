@@ -15,6 +15,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "CENTRUM MIGRANTA",
   description: "Punkty informacyjny dla migrantów",
+  keywords:
+    "Centrum Migranta, Центр Мігранта, карта побиту, карта сталого побиту, карта резидента, громадянство, Присяжні переклади, Шлюб на території Польщі, Відкриття фірми, Написання бізнес-плану, Усі види довіреностей, Апостиль на документи, Заміна та перевірка водійських прав, Оформлення КОД 95, чіп-картки водія, Дозволи на роботу для візи, 800+, 300+, Profil Zaufany, PIT, Легалізація, Бізнес, Освіта",
+  authors: [
+    {
+      name: "Centrum Migranta - Центр Мігранта",
+      url: "https://migrant-center.vercel.app/",
+    },
+  ],
+  metadataBase: new URL("https://migrant-center.vercel.app/"),
 };
 
 export default function RootLayout({
