@@ -3,6 +3,7 @@ export type linksTypes = {
   name: string;
   href: string;
 };
+
 export enum ROUTES {
   HOME = "/",
   GALLERY = "/gallery",
@@ -13,6 +14,7 @@ export enum ROUTES {
   CONTACT_3 = "/contacts/sulecin",
   CONTACT_4 = "/contacts/sopot",
   CONTACT_5 = "/contacts/swinousce",
+  CONTACT_6 = "/contacts/nowa-sol",
 }
 export enum ROUTES_IDs {
   HOME = "home",
@@ -24,6 +26,7 @@ export enum ROUTES_IDs {
   CONTACT_3 = "sulecin",
   CONTACT_4 = "sopot",
   CONTACT_5 = "swinousce",
+  CONTACT_6 = "nowa-sol",
 }
 export enum ROUTES_NAMES {
   HOME = "Головна",
@@ -35,6 +38,7 @@ export enum ROUTES_NAMES {
   CONTACT_3 = "Sulęcin",
   CONTACT_4 = "Sopot",
   CONTACT_5 = "Świnoujście",
+  CONTACT_6 = "Nowa Sól",
 }
 
 export const mainRoutes = [
@@ -80,5 +84,10 @@ export const contactsRoutes = [
     id: ROUTES_IDs.CONTACT_5,
     name: ROUTES_NAMES.CONTACT_5,
     href: ROUTES.CONTACT_5,
+  },
+  {
+    id: ROUTES_IDs.CONTACT_6,
+    name: ROUTES_NAMES.CONTACT_6,
+    href: ROUTES.CONTACT_6,
   },
 ];

@@ -14,6 +14,9 @@ const sopotMapSrc =
 const swinousceMapSrc =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146.89146993096583!2d14.24964563874162!3d53.909293047820206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa5f337d2eaaab%3A0x5b8fdfc7d6dc9368!2zUGFzYcW8IMW7ZWdsYXJza2E!5e0!3m2!1sru!2spl!4v1727594226199!5m2!1sru!2spl";
 
+const nowaSolMapSrc =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.07705710041702!2d15.717941051768227!3d51.80140506625912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470607c9369fce19%3A0x3da269ac1086ead0!2splac%20Wyzwolenia%202%2C%2067-100%20Nowa%20S%C3%B3l!5e0!3m2!1suk!2spl!4v1729447812531!5m2!1suk!2spl";
+
 export type ContactsLinksTypes = {
   id: string;
   name: string;
@@ -66,6 +69,14 @@ export const contactsLinks = [
     address: "Świnoujście, Pasaż Żeglarska, ul. Bohaterów Września 83/18",
     mapIframeUrl: swinousceMapSrc,
     mapMark: "https://maps.app.goo.gl/HqHxcY33xK8rpEvg9",
+    facebook: "https://www.facebook.com/migrantgorzow",
+  },
+  {
+    ...contactsRoutes[5],
+    phone: "+48 730 506 327",
+    address: "Nowa Sól, Plac Wyzwolenia 2 (koło apteki Pod Orłem)",
+    mapIframeUrl: nowaSolMapSrc,
+    mapMark: "https://maps.app.goo.gl/WQdUdxnaKmyvTDpg7",
     facebook: "https://www.facebook.com/migrantgorzow",
   },
 ];
