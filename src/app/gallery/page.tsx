@@ -12,7 +12,7 @@ export default function Page() {
           <Image
             key={id}
             src={src}
-            alt="image"
+            alt="image-CENTRUM-MIGRANTA"
             priority={true}
             width={imageWidth}
             height={imageHeight}
