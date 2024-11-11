@@ -28,3 +28,7 @@ export const servicesData = [
     label: "Організація зустрічей, конференцій, семінарів, майстер-класів ",
   },
 ];
+
+export const serviceKeywords = servicesData
+  .map((service) => service.label)
+  .join(", ");

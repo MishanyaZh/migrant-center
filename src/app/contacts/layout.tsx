@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         Офіс Центру Мігранта в твоєму місті:
       </h2>
       <NavLinks links={contactsRoutes} />
-      <div className="hidden-on-desktop w-full bg-theme-background px-4 ">
+      <div className="hidden-on-desktop w-full px-4 ">
         {contactsRoutes.map((subLink) => {
           return (
             <Link

@@ -55,6 +55,27 @@ body {
     color 0.3s;
 }
 
+.backgroundContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.backgroundContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../public/svg/logo.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(1px) opacity(0.5);
+  opacity: 0.1;
+  z-index: -1;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
