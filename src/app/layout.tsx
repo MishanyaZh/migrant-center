@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Centrum Migranta - Центр Мігранта",
-  description: "Punkty informacyjny dla migrantów",
+  description: "Легалізація. Бізнес. Освіта.",
   keywords: `Centrum Migranta, Центр Мігранта, ${serviceKeywords}`,
   authors: [
     {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://migrant-center.vercel.app/"),
   openGraph: {
     title: "Centrum Migranta - Центр Мігранта",
-    description: "Punkty informacyjny dla migrantów",
+    description: "Легалізація. Бізнес. Освіта.",
     url: "https://migrant-center.vercel.app/",
     type: "website",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@your_twitter_handle",
     title: "Centrum Migranta - Центр Мігранта",
-    description: "Punkty informacyjny dla migrantów",
+    description: "Легалізація. Бізнес. Освіта.",
     images: ["https://migrant-center.vercel.app/opengraph-image.png"],
   },
 };
